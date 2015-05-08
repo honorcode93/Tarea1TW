@@ -1,0 +1,43 @@
+// Font weights
+$thin: 100;
+$lighter: 200;
+$light: 300;
+$regular: 400;
+$semi-bold: 600;
+$bold: 800;
+$heavy: 900;
+
+// Base Font
+$base-font-family: miso, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-size: 14px;
+$base-rembase: 10;
+$base-font-weight: $light;
+$base-line-height: 24px;
+
+$background: url('../img/bg.jpg') no-repeat center center fixed;
+
+// Breakpoints
+$iphone-landscape: 569px;
+$iphone-vertical: 320px;
+$ipad-landscape: 1024px;
+$ipad-vertical: 768px;
+
+// Fixed Font
+$fixed-font-family: monospace;
+$fixed-font-size: 85%;
+$fixed-line-height: $base-line-height;
+
+// Layout
+$wrapper-width: 980px;
+$main-background: white;
+$main-padding: 0;
+
+// Colors
+$text: #fff;
+$link: #ff4c00;
+$link-hover: $link;
+$link-active: lighten($link, 10%);
+$link-focus: lighten($link, 10%);
+$placeholder-color: #000;
+
+@import "modules/all";

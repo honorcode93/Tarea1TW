@@ -1,0 +1,21 @@
+{
+  "name": "sesion-3",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mammut/tdwm",
+  "authors": [
+    "mammut <irken.cs@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.1",
+    "skeleton": "~2.0.4",
+    "ionicons": "~2.0.1"
+  }
+}
