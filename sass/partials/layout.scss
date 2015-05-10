@@ -1,11 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 body {
-
+	font-family: 'Raleway', sans-serif;
 }
 
-cart-list{
+.container{
+	min-width: 900px;
+}
+
+.cart-list{
+	width:400px;
 	float: left;
+	margin-top: 10px;
 }
 
-item-list{
+ul{
+	list-style-type: none;
+}
+
+.product-title{
+	//float:left;
+}
+.price{
+	//float:left;
+	color: #626262;
+}
+
+.cart-buttons{
+	margin-left: 40px;
+}
+
+.product-name{
+	width: 100px;
+}
+
+.item-list{
 	float: right;
+	width:500px;
+	margin-top: 10px;
+	//margin-top: 10px;
+	//margin-left: 10px;
+}
+
+.item-list-item{
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #D3D3D3;
+}
+
+.btn{
+	background-color: #00B0DA;
+	color: white;
+}
+
+.icon{
+	border: none;
+	padding: 0px 0px 0px 0px;
+	margin: 2px 2px 2px 2px;
+}
+
+.clearfix {
+  display: inline-block;
 }

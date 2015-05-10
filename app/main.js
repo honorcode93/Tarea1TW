@@ -27,7 +27,7 @@ var TodoApp = React.createClass({
 	},
 
 	add: function(item){
-		var cart = this.state.shopCart;
+		var cart = this.state.cartList;
 		var pos = -1;
 		//Buscar si esta en la lista
 		cart.forEach( function(cart_item, index){
@@ -39,7 +39,7 @@ var TodoApp = React.createClass({
 
 		if(pos == -1)
 		{
-			item['qty'] = 1;
+			item['qty'] = 1;	
 			cart.push(item);
 		}
 		else
@@ -47,11 +47,11 @@ var TodoApp = React.createClass({
 			cart[pos]['qty'] += 1;
 		}
 
-		this.setState({shopList: cart});
+		this.setState({cartList: cart});
 	},
 
 	sub: function(item){
-		var cart = this.state.shopCart;
+		var cart = this.state.cartList;
 		var pos = -1;
 		cart.forEach( function(cart_item, index){
 			if(cart_item['id'] == item['id'])
@@ -63,17 +63,17 @@ var TodoApp = React.createClass({
 		if(pos != -1)
 		{
 			cart[pos]['qty'] -= 1;
-			if(cart[pos]['qty'] < 0)
+			if(cart[pos]['qty'] <= 0)
 			{
 				cart.splice(pos, 1);
 			}
 		}
 
-		this.setState({shopList: cart});
+		this.setState({cartList: cart});
 	},
 
 	del: function(item){
-		var cart = this.state.shopCart;
+		var cart = this.state.cartList;
 		var pos = -1;
 		cart.forEach( function(cart_item, index){
 			if(cart_item['id'] == item['id'])
@@ -87,14 +87,16 @@ var TodoApp = React.createClass({
 			cart.splice(pos, 1);
 		}
 
-		this.setState({shopList: cart});
+		this.setState({cartList: cart});
 	},
 
 	render: function(){
 		return(
-			<div className="TodoApp">
+			<div className="container">
 				<ShopCart items={this.state.cartList} add = {this.add} sub = {this.sub} del = {this.del} />
 				<ItemList items={this.state.itemList} add = {this.add} />
+				<div className="clearfix"></div>
+				
 			</div>
 		);
 	}
